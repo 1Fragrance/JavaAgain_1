@@ -19,20 +19,12 @@ public class ClientSide {
         printMenu();
 
         var scanner = new Scanner(System.in);
-        String choice = scanner.nextLine();;
+        String choice = scanner.nextLine();
 
-        switch(choice) {
-            case "1": {
-                handleInsertRecord(stub);
-                break;
-            }
-            case "2": {
-                handleGetList(stub);
-                break;
-            }
-            default : {
-                System.out.println("Invalid command");
-            }
+        switch (choice) {
+            case "1" -> handleInsertRecord(stub);
+            case "2" -> handleGetList(stub);
+            default -> System.out.println("Invalid command");
         }
     }
 
@@ -64,8 +56,8 @@ public class ClientSide {
         try {
             var list = remoteObject.getList();
 
-            for(var i = 0; i < list.size(); i++) {
-                System.out.println(list.get(i));
+            for (String s : list) {
+                System.out.println(s);
             }
         }
         catch (IOException e) {
