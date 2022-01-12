@@ -42,6 +42,6 @@ public class Payment implements ISerializable, Serializable {
     }
 
     public String getFileRepresentation() {
-        return "code: " + getCreditCode() + " | amount: " + getValue() + " | date: " + createDate.toString();
+        return "code: " + getCreditCode() + " | amount: " + getValue() + " | date: " + createDate.toString() + "\n";
     }
 }

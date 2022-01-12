@@ -22,9 +22,17 @@ public class ClientSide {
         String choice = scanner.nextLine();
 
         switch (choice) {
-            case "1" -> handleInsertRecord(stub);
-            case "2" -> handleGetList(stub);
-            default -> System.out.println("Invalid command");
+            case "1" : {
+                handleInsertRecord(stub);
+                break;
+            }
+            case "2" : {
+                handleGetList(stub);
+                break;
+            }
+            default: {
+                System.out.println("Invalid command");
+            }
         }
     }
 
@@ -57,7 +65,7 @@ public class ClientSide {
             var list = remoteObject.getList();
 
             for (String s : list) {
-                System.out.println(s);
+                System.out.print(s);
             }
         }
         catch (IOException e) {

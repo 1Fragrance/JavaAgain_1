@@ -1,1 +1,1 @@
-123 | 321.0 | Sun Jan 02 22:08:43 MSK 2022
+code: 333 | amount: 444.0 | date: Wed Jan 12 15:46:51 MSK 2022
